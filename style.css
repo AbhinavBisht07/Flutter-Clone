@@ -282,6 +282,52 @@ main section.fakeFooter .links .link a {
   font-weight: 400;
   color: rgb(74, 74, 74);
 }
+main footer {
+  padding: 50px 0px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main footer .box1 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+main footer .box1 a i {
+  font-size: 20px;
+  color: #4A4A4A;
+}
+main footer .box2 {
+  border-top: 1px solid #cdcfd2;
+  padding-top: 40px;
+  text-align: center;
+}
+main footer .box2 p {
+  width: 80%;
+  margin: auto;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(74, 74, 74);
+}
+main footer .box2 .anchors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+main footer .box2 .anchors a {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: roboto;
+  font-weight: 400;
+  color: rgb(74, 74, 74);
+}
+main footer .box2 .anchors a:hover {
+  text-decoration: underline;
+}
 
 @media (min-width: 1024px) {
   main section.view1 .flex {
@@ -364,5 +410,23 @@ main section.fakeFooter .links .link a {
   main section.fakeFooter .links {
     flex-direction: row;
     gap: 10vw;
+  }
+  main footer .box1 {
+    justify-content: flex-start;
+  }
+  main footer .box2 {
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 50px;
+  }
+  main footer .box2 p {
+    width: 100%;
+  }
+  main footer .box2 .anchors {
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px;
   }
 }/*# sourceMappingURL=style.css.map */
