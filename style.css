@@ -66,7 +66,9 @@ main .view {
 }
 main header {
   position: fixed;
+  z-index: 5;
   background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.162);
   width: 100%;
 }
 main header #introduction {
@@ -191,8 +193,64 @@ main section.view-twins .flex .box2 .btns .blank {
   padding: 0px 24px;
   color: black;
 }
-main section.view4, main section.view6 {
+main section.view4,
+main section.view6 {
   background: linear-gradient(to left, #F5FBFE, #FCFCE2 70%);
+}
+main section.view7 {
+  padding: 70px 0px;
+}
+main section.view7 .blueContainer {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: #042449;
+}
+main section.view7 .blueContainer .text {
+  position: relative;
+  z-index: 2;
+  padding: 96px 50px;
+}
+main section.view7 .blueContainer .text h1 {
+  font-size: 46px;
+  line-height: 55px;
+  color: white;
+  margin-bottom: 24px;
+}
+main section.view7 .blueContainer .text p {
+  font-size: 18px;
+  line-height: 25px;
+  color: white;
+  margin-bottom: 32px;
+}
+main section.view7 .blueContainer .text .btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main section.view7 .blueContainer .text .btns .btn {
+  border: none;
+  background-color: white;
+  color: #0468D7;
+}
+main section.view7 .blueContainer .text .btns .blank {
+  color: white;
+}
+main section.view7 .blueContainer .image {
+  position: absolute;
+  z-index: 1;
+  max-width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+main section.view7 .blueContainer .image img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -247,10 +305,24 @@ main section.view4, main section.view6 {
     font-size: 20px;
     line-height: 28px;
   }
-  main section.view3 .flex, main section.view5 .flex {
+  main section.view3 .flex,
+  main section.view5 .flex {
     flex-direction: row-reverse;
   }
-  main section.view3 .flex .box2, main section.view5 .flex .box2 {
+  main section.view3 .flex .box2,
+  main section.view5 .flex .box2 {
     padding: 0px 140px 0px 50px;
+  }
+  main section.view7 .blueContainer .text {
+    padding: 75px 70px;
+  }
+  main section.view7 .blueContainer .text h1 {
+    font-size: 60px;
+    line-height: 72px;
+    margin-bottom: 10px;
+  }
+  main section.view7 .blueContainer .text p {
+    font-size: 20px;
+    line-height: 28px;
   }
 }/*# sourceMappingURL=style.css.map */
