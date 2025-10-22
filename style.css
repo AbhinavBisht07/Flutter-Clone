@@ -68,7 +68,7 @@ main header {
   position: fixed;
   z-index: 5;
   background-color: white;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.162);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.362);
   width: 100%;
 }
 main header #introduction {
@@ -252,6 +252,36 @@ main section.view7 .blueContainer .image img {
   width: 100%;
   height: 100%;
 }
+main section.fakeFooter {
+  padding: 70px 0px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main section.fakeFooter .logo img {
+  width: 130px;
+}
+main section.fakeFooter .links {
+  padding: 0px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main section.fakeFooter .links .link {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+main section.fakeFooter .links .link h1 {
+  font-size: 16px;
+}
+main section.fakeFooter .links .link a {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(74, 74, 74);
+}
 
 @media (min-width: 1024px) {
   main section.view1 .flex {
@@ -324,5 +354,15 @@ main section.view7 .blueContainer .image img {
   main section.view7 .blueContainer .text p {
     font-size: 20px;
     line-height: 28px;
+  }
+}
+@media (min-width: 768px) {
+  main section.fakeFooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main section.fakeFooter .links {
+    flex-direction: row;
+    gap: 10vw;
   }
 }/*# sourceMappingURL=style.css.map */
