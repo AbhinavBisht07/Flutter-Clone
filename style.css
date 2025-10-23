@@ -69,7 +69,7 @@ a {
 }
 
 main {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 main .view {
@@ -106,9 +106,138 @@ main header.header1 nav.navbar {
 main header.header1 nav.navbar .logo img {
   width: 130px;
 }
-main header.header1 nav.navbar .menu i {
+main header.header1 nav.navbar .menuBtn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main header.header1 nav.navbar .menuBtn i {
   font-size: 20px;
   font-weight: 600;
+}
+main header.header1 nav.navbar .menuBtn:hover {
+  transform: scale(1.3);
+}
+main header.header1 nav.navbar .menuBtn:active {
+  transform: scale(0.8);
+}
+main section.slidingMenu {
+  padding: 30px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: #0468D7;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main section.slidingMenu .top {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main section.slidingMenu .top .cancelMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.slidingMenu .top .cancelMenu .logo img {
+  width: 130px;
+}
+main section.slidingMenu .top .cancelMenu .cancelBtn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main section.slidingMenu .top .cancelMenu .cancelBtn i {
+  color: white;
+  font-size: 20px;
+}
+main section.slidingMenu .top .cancelMenu .cancelBtn:hover {
+  transform: scale(1.5);
+}
+main section.slidingMenu .top .cancelMenu .cancelBtn:active {
+  transform: scale(0.8);
+}
+main section.slidingMenu .top .inp {
+  position: relative;
+}
+main section.slidingMenu .top .inp input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.133);
+  border: none;
+  outline: none;
+  padding: 15px 50px;
+  border-radius: 30px;
+}
+main section.slidingMenu .top .inp input::-moz-placeholder {
+  color: rgb(218, 218, 218);
+}
+main section.slidingMenu .top .inp input::placeholder {
+  color: rgb(218, 218, 218);
+}
+main section.slidingMenu .top .inp i {
+  color: white;
+  top: 29%;
+  left: 8%;
+  position: absolute;
+}
+main section.slidingMenu .top .menu1 {
+  height: 60vh;
+  overflow: auto;
+  padding: 20px;
+}
+main section.slidingMenu .top .menu1 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+main section.slidingMenu .top .menu1 ul li {
+  list-style: none;
+  cursor: pointer;
+}
+main section.slidingMenu .top .menu1 ul li p {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+main section.slidingMenu .top .menu1 ul li p i {
+  color: white;
+}
+main section.slidingMenu .top .menu1 ul li p i.down {
+  display: inline;
+}
+main section.slidingMenu .top .menu1 ul li p i.up {
+  display: none;
+}
+main section.slidingMenu .top .menu1 ul li.dropdown ul.dropdownMenu {
+  border-radius: 5px;
+  padding: 20px 10px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3vh;
+  display: none;
+}
+main section.slidingMenu .top .menu1 ul li.dropdown ul.dropdownMenu li {
+  width: 14ch;
+}
+main section.slidingMenu .top .menu1 ul li.dropdown ul.dropdownMenu li a {
+  color: #ffffff;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+main section.slidingMenu .bottom button {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+main section.slidingMenu .bottom button:hover {
+  color: #0468D7;
+  background-color: white;
 }
 main header.header2 {
   display: none;
@@ -141,38 +270,38 @@ main header.header2 nav.navbar {
 main header.header2 nav.navbar .logo img {
   width: 130px;
 }
-main header.header2 nav.navbar .menu ul {
+main header.header2 nav.navbar .menu2 ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3vw;
 }
-main header.header2 nav.navbar .menu ul li {
+main header.header2 nav.navbar .menu2 ul li {
   list-style: none;
   cursor: pointer;
 }
-main header.header2 nav.navbar .menu ul li a {
+main header.header2 nav.navbar .menu2 ul li a {
   color: #4a4a4a;
   font-size: 14px;
   font-weight: 700;
 }
-main header.header2 nav.navbar .menu ul li a.ecosystem {
+main header.header2 nav.navbar .menu2 ul li a.ecosystem {
   color: #0468D7;
 }
-main header.header2 nav.navbar .menu ul li a:hover {
+main header.header2 nav.navbar .menu2 ul li a:hover {
   color: #0468D7;
 }
-main header.header2 nav.navbar .menu ul li i {
+main header.header2 nav.navbar .menu2 ul li i {
   font-weight: 600;
   color: #4a4a4a;
 }
-main header.header2 nav.navbar .menu ul li button {
+main header.header2 nav.navbar .menu2 ul li button {
   cursor: pointer;
 }
-main header.header2 nav.navbar .menu ul li.dropdown {
+main header.header2 nav.navbar .menu2 ul li.dropdown {
   position: relative;
 }
-main header.header2 nav.navbar .menu ul li.dropdown ul.dropdownMenu {
+main header.header2 nav.navbar .menu2 ul li.dropdown ul.dropdownMenu {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -191,27 +320,27 @@ main header.header2 nav.navbar .menu ul li.dropdown ul.dropdownMenu {
   transform: translateY(10px);
   transition: all 0.3s ease;
 }
-main header.header2 nav.navbar .menu ul li.dropdown ul.dropdownMenu li {
+main header.header2 nav.navbar .menu2 ul li.dropdown ul.dropdownMenu li {
   width: 14ch;
 }
-main header.header2 nav.navbar .menu ul li.dropdown ul.dropdownMenu li a {
+main header.header2 nav.navbar .menu2 ul li.dropdown ul.dropdownMenu li a {
   color: #4a4a4a;
   font-weight: 400;
   transition: all 0.2s ease;
 }
-main header.header2 nav.navbar .menu ul li.dropdown ul.dropdownMenu li a:hover {
+main header.header2 nav.navbar .menu2 ul li.dropdown ul.dropdownMenu li a:hover {
   color: #0468D7;
   font-weight: 700;
   transform: scale(1.1);
 }
-main header.header2 nav.navbar .menu ul li.dropdown ul.bigMenu {
+main header.header2 nav.navbar .menu2 ul li.dropdown ul.bigMenu {
   width: 350px;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   left: -350%;
 }
-main header.header2 nav.navbar .menu ul li.dropdown:hover .dropdownMenu {
+main header.header2 nav.navbar .menu2 ul li.dropdown:hover .dropdownMenu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
