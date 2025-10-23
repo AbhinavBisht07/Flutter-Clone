@@ -164,18 +164,21 @@ main section.slidingMenu .top .inp {
 }
 main section.slidingMenu .top .inp input {
   width: 100%;
-  font-size: 14px;
-  font-weight: 700;
   background-color: rgba(255, 255, 255, 0.133);
   border: none;
   outline: none;
   padding: 15px 50px;
   border-radius: 30px;
+  color: rgb(255, 255, 255);
 }
 main section.slidingMenu .top .inp input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 700;
   color: rgb(218, 218, 218);
 }
 main section.slidingMenu .top .inp input::placeholder {
+  font-size: 14px;
+  font-weight: 700;
   color: rgb(218, 218, 218);
 }
 main section.slidingMenu .top .inp i {
