@@ -128,7 +128,6 @@ main section.slidingMenu {
   height: 100vh;
   background-color: #0468D7;
   display: flex;
-  display: none;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -181,7 +180,7 @@ main section.slidingMenu .top .inp input::placeholder {
 main section.slidingMenu .top .inp i {
   color: white;
   top: 29%;
-  left: 8%;
+  left: 25px;
   position: absolute;
 }
 main section.slidingMenu .top .menu1 {
