@@ -59,6 +59,17 @@ a {
     background-color: #2984ed;
 }
 
+.blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    transition: all 0.3s ease-out;
+}
+
+.blank:hover {
+    gap: 8px;
+}
 
 
 main {
@@ -73,14 +84,15 @@ main {
         margin: auto;
     }
 
-    header {
+    header.header1 {
+        // display: none;
         position: fixed;
         z-index: 5;
         background-color: white;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.362);
         width: 100%;
 
-        #introduction {
+        .introduction {
             background: linear-gradient(to right, #057CFD, #803FF2);
             text-align: center;
             padding: 16px 0px;
@@ -95,7 +107,7 @@ main {
             }
         }
 
-        #head {
+        nav.navbar {
             width: 93vw;
             margin: auto;
             padding: 22px 0;
@@ -117,6 +129,145 @@ main {
             }
         }
     }
+
+    header.header2 {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        background-color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.362);
+        width: 100%;
+
+        .introduction {
+            background: linear-gradient(to right, #057CFD, #803FF2);
+            text-align: center;
+            padding: 16px 0px;
+
+            h1 {
+                color: white;
+                font-size: 14px;
+
+                i {
+                    font-weight: 100;
+                }
+            }
+        }
+
+        nav.navbar {
+            width: 93vw;
+            margin: auto;
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                img {
+                    width: 130px;
+                }
+            }
+
+            .menu {
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3vw;
+
+                    li {
+                        list-style: none;
+                        cursor: pointer;
+
+                        a {
+                            color: #4a4a4a;
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+
+                        a.ecosystem {
+                            color: #0468D7;
+                        }
+
+                        a:hover {
+                            color: #0468D7;
+                        }
+
+                        i {
+                            font-weight: 600;
+                            color: #4a4a4a;
+                        }
+
+                        button {
+                            cursor: pointer;
+                        }
+                    }
+
+                    li.dropdown {
+                        position: relative;
+
+                        ul.dropdownMenu {
+                            position: absolute;
+                            display: flex;
+
+                            flex-direction: column;
+                            // justify-content: flex-start;
+                            align-items: flex-start;
+                            gap: 3vh;
+                            background-color: white;
+                            top: 0;
+                            top: 260%;
+                            top: 105%;
+                            left: -40%;
+                            border-radius: 5px;
+                            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.403);
+                            padding: 40px 10px 40px 30px;
+
+                            // display: none; /////// Transitions don’t work when you toggle between display: none and display: flex because display is not animatable in CSS. Thats why :-
+
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(10px); // small slide effect
+                            transition: all 0.3s ease;
+
+
+                            li {
+                                width: 14ch;
+
+                                a {
+                                    color: #4a4a4a;
+                                    font-weight: 400;
+                                    transition: all 0.2s ease;
+                                }
+
+                                a:hover {
+                                    color: #0468D7;
+                                    font-weight: 700;
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+
+                        ul.bigMenu {
+                            width: 350px; ////
+                            flex-direction: row; /////
+                            justify-content: flex-start; ////
+                            flex-wrap: wrap; //////
+                            left: -350%; ///////////
+                        }
+                    }
+
+                    li.dropdown:hover .dropdownMenu {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+
+
+
 
     section.view1 {
         // width: 100%;
@@ -344,6 +495,10 @@ main {
                     font-weight: 400;
                     color: rgb(74, 74, 74);
                 }
+
+                a:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -409,6 +564,15 @@ main {
 
 
 @media (min-width:1024px) {
+    main{
+        header.header1{
+            display:none;
+        }
+        header.header2{
+            display: block;
+        }
+    }
+    
     main {
         section.view1 {
             .flex {
